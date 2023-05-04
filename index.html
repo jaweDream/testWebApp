@@ -10,7 +10,7 @@
     <meta name="HandheldFriendly" content="True" />
     <meta name="robots" content="noindex,nofollow" />
     <title></title>
-    <script src="https://telegram.org/js/telegram-web-app.js?1"></script>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <script>
         function setThemeClass() {
             document.documentElement.className = Telegram.WebApp.colorScheme;
@@ -293,7 +293,7 @@
 <body class="" style="visibility: hidden;">
 
 <section id="top_sect" class="second">
-    <button id="main_btn" onclick="DemoApp.sendMessage('');">111Send «Hello, World!222»</button>
+    <button id="main_btn" onclick="DemoApp.sendMessage('');">222Send «Hello, World!222»</button>
     <button id="with_webview_btn" onclick="DemoApp.sendMessage('', true);">Send «Hello, World!» with inline webview button</button>
     <button id="data_btn" onclick="DemoApp.sendTime(true);">Send current time to bot (x10)</button>
     <button onclick="DemoApp.expand();">Expand Webview</button>
@@ -419,7 +419,8 @@
 
         // actions
         sendMessage(msg_id, with_webview) {
-            alert(Telegram.WebApp.initData)
+            alert(Telegram.WebApp.user)
+            alert(Telegram.WebApp.chat)
             if (!DemoApp.initDataUnsafe.query_id) {
                 alert('WebViewQueryId not defined');
                 return;
